@@ -4,6 +4,7 @@ import Hero from "./components/Hero/Hero";
 import BookingForm from "./components/Booking/BookingForm";
 import FeatureSection from "./components/Features/FeatureSection";
 import AboutSection from "./components/About/AboutSection";
+import ServiceSection from "./components/Services/ServiceSection";
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <BookingForm />
       <FeatureSection />
       <AboutSection />
+      <ServiceSection />
       <div
         style={{
           background: "#f5f5f5",
