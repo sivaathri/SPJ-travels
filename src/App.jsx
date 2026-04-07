@@ -5,6 +5,8 @@ import BookingForm from "./components/Booking/BookingForm";
 import FeatureSection from "./components/Features/FeatureSection";
 import AboutSection from "./components/About/AboutSection";
 import ServiceSection from "./components/Services/ServiceSection";
+import TariffSection from "./components/Tariff/TariffSection";
+import Footer from "./components/Footer/Footer";
 
 
 function App() {
@@ -17,18 +19,8 @@ function App() {
       <FeatureSection />
       <AboutSection />
       <ServiceSection />
-      <div
-        style={{
-          background: "#f5f5f5",
-          paddingTop: "80px",
-          paddingBottom: "40px",
-          textAlign: "center",
-        }}
-      >
-        <p style={{ color: "#999", fontSize: "14px" }}>
-          © {new Date().getFullYear()} SPJ Tours & Travels. All Rights Reserved.
-        </p>
-      </div>
+      <TariffSection />
+      <Footer />
     </div>
   );
 }

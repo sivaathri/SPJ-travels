@@ -63,8 +63,8 @@ const ServiceSection = () => {
             viewport={{ once: true }}
             style={{ textAlign: "center", marginBottom: "80px" }}
         >
-            <h4 style={{ color: "#f58220", fontSize: "14px", fontWeight: 800, letterSpacing: "2px", marginBottom: "15px" }}>EXPERIENCE SOUTH INDIA</h4>
-            <h2 style={{ fontSize: "48px", fontWeight: 900, color: "#1f2a44", marginBottom: "20px" }}>Services Across Tamil Nadu</h2>
+          
+            <h2 style={{ fontSize: "48px", fontWeight: 900, color: "#1f2a44", marginBottom: "20px" }}>Our Services</h2>
             <div style={{ width: "80px", height: "4px", background: "#f58220", margin: "0 auto" }}></div>
         </motion.div>
 
@@ -101,13 +101,6 @@ const ServiceSection = () => {
               </motion.h3>
 
               <p style={descStyle}>{s.desc}</p>
-
-              <motion.button 
-                style={btnStyle}
-                whileHover={{ letterSpacing: "3px", scale: 1.05 }}
-              >
-                BOOK NOW
-              </motion.button>
             </motion.div>
           ))}
         </motion.div>
@@ -179,18 +172,6 @@ const descStyle = {
     lineHeight: 1.7,
     maxWidth: "340px",
     margin: "0 auto 25px auto",
-};
-
-const btnStyle = {
-  background: "transparent",
-  border: "none",
-  color: "#f58220",
-  fontWeight: 800,
-  fontSize: "14px",
-  letterSpacing: "1.5px",
-  cursor: "pointer",
-  textTransform: "uppercase",
-  transition: "all 0.3s",
 };
 
 export default ServiceSection;
