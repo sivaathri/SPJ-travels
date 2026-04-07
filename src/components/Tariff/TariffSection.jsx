@@ -1,32 +1,49 @@
+import v1 from "../../assets/24.png"; // Icon
+import v2 from "../../assets/242.png"; // Icon 
+import v3 from "../../assets/244.png"; // Icon
+// Back to vehicles
 import oneway from "../../assets/oneway.png";
 import outstation from "../../assets/outstation.png";
 import airport from "../../assets/airport.png";
+import { ArrowRight } from "lucide-react";
 
 const TariffSection = () => {
   const tariffs = [
     {
       img: oneway,
-      title: "Sedan (Dzire, Etios)",
+      type: "ONE WAY",
+      title: "Sedan (Dzire/Etios)",
       price: "14",
-      oneWay: "One Way",
-      roundTrip: "Round Trip - Rs. 13",
-      allowance: "Driver Allowance - Rs. 300"
+      details: [
+        "Round Trip - Rs. 13",
+        "Driver Allowance - Rs. 400",
+        "One Way - Minimum 130 Km",
+        "Round Trip - Minimum 250 Km"
+      ]
     },
     {
       img: outstation,
-      title: "SUV (Xylo, Ertiga)",
+      type: "ONE WAY",
+      title: "SUV(Xylo/Ertiga)",
       price: "19",
-      oneWay: "One Way",
-      roundTrip: "Round Trip - Rs. 17",
-      allowance: "Driver Allowance - Rs. 400"
+      details: [
+        "Round Trip - Rs. 17",
+        "Driver Allowance - Rs. 500",
+        "One Way - Minimum 130 Km",
+        "Round Trip - Minimum 250 Km"
+      ]
     },
     {
       img: airport,
+      type: "ONE WAY",
       title: "Assured Innova",
       price: "20",
-      oneWay: "One Way",
-      roundTrip: "Round Trip - Rs. 18",
-      allowance: "Driver Allowance - Rs. 400"
+      details: [
+        "Round Trip - 18",
+        "Driver Allowance - Rs. 500",
+        "One Way - Minimum 130 Km",
+        "Round Trip - Minimum 130 Km"
+      ]
     }
   ];
 
@@ -34,32 +51,41 @@ const TariffSection = () => {
     <section style={containerStyle}>
       <div style={innerStyle}>
         <div style={headerStyle}>
-          <h4 style={taglineStyle}>Tariff</h4>
+          <div style={taglineContainer}>
+             <span style={dotStyle}></span>
+             <h4 style={taglineStyle}>LOWEST PRICES</h4>
+          </div>
           <h2 style={headingStyle}>Our Tariff</h2>
         </div>
 
         <div style={gridStyle}>
           {tariffs.map((t, i) => (
             <div key={i} style={cardStyle}>
-              {/* Image at Top - High Z-index to float over content box */}
+              {/* Image at Top */}
               <div style={imgWrapperStyle}>
                 <img src={t.img} alt={t.title} style={imgStyle} />
               </div>
 
-              {/* Content Box - Light Gray with Shadow */}
-              <div style={contentBoxStyle}>
+              {/* Card Body */}
+              <div style={cardBodyStyle}>
+                <span style={typeLabelStyle}>{t.type}</span>
                 <h3 style={cardTitleStyle}>{t.title}</h3>
                 
                 <div style={priceContainerStyle}>
                   <span style={rsStyle}>Rs.</span>
                   <span style={priceNumberStyle}>{t.price}</span>
+                  <span style={perKmStyle}>/per km</span>
                 </div>
 
                 <div style={detailsListStyle}>
-                   <div style={detailItemStyle}>{t.oneWay}</div>
-                   <div style={detailItemStyle}>{t.roundTrip}</div>
-                   <div style={detailItemStyle}>{t.allowance}</div>
+                   {t.details.map((detail, dIdx) => (
+                     <div key={dIdx} style={detailItemStyle}>{detail}</div>
+                   ))}
                 </div>
+
+                <button style={bookBtnStyle}>
+                  BOOK NOW <ArrowRight size={18} />
+                </button>
               </div>
             </div>
           ))}
@@ -72,7 +98,7 @@ const TariffSection = () => {
 const containerStyle = {
   width: "100%",
   padding: "100px 20px",
-  background: "white",
+  background: "#f1f5f9", // Light gray background
 };
 
 const innerStyle = {
@@ -82,18 +108,34 @@ const innerStyle = {
 
 const headerStyle = {
   textAlign: "center",
-  marginBottom: "100px",
+  marginBottom: "80px",
+};
+
+const taglineContainer = {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: "10px",
+    marginBottom: "10px",
+};
+
+const dotStyle = {
+    width: "8px",
+    height: "8px",
+    background: "#f58220",
+    borderRadius: "50%",
 };
 
 const taglineStyle = {
-  color: "#f58220",
+  color: "#334155",
   fontSize: "14px",
   fontWeight: 700,
-  margin: "0 0 10px 0",
+  letterSpacing: "1px",
+  margin: 0,
 };
 
 const headingStyle = {
-  fontSize: "36px",
+  fontSize: "48px",
   fontWeight: 900,
   color: "#1e293b",
   margin: 0,
@@ -101,26 +143,26 @@ const headingStyle = {
 
 const gridStyle = {
   display: "grid",
-  gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-  gap: "40px",
+  gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))",
+  gap: "30px",
   justifyContent: "center",
-  alignItems: "end", // Align cards to bottom like reference images
 };
 
 const cardStyle = {
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  position: "relative",
+    background: "white",
+    borderRadius: "15px",
+    overflow: "hidden",
+    boxShadow: "0 10px 40px rgba(0,0,0,0.03)",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    padding: "40px 20px",
 };
 
 const imgWrapperStyle = {
     width: "100%",
-    maxWidth: "360px",
-    marginBottom: "-30px", // Increased overlap to match the float feel
-    zIndex: 10,
-    display: "flex",
-    justifyContent: "center",
+    maxWidth: "280px",
+    marginBottom: "30px",
 };
 
 const imgStyle = {
@@ -129,51 +171,60 @@ const imgStyle = {
     objectFit: "contain",
 };
 
-const contentBoxStyle = {
+const cardBodyStyle = {
     width: "100%",
-    background: "#f8f9fa",
-    padding: "60px 30px 40px 30px",
-    borderRadius: "12px",
     textAlign: "center",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    boxShadow: "0 10px 30px rgba(0,0,0,0.03)",
+};
+
+const typeLabelStyle = {
+    color: "#f58220",
+    fontSize: "14px",
+    fontWeight: 800,
+    marginBottom: "10px",
+    letterSpacing: "1px",
 };
 
 const cardTitleStyle = {
-    fontSize: "22px",
+    fontSize: "24px",
     fontWeight: 800,
     color: "#1e293b",
-    marginBottom: "15px",
+    marginBottom: "25px",
 };
 
 const priceContainerStyle = {
     display: "flex",
-    alignItems: "flex-start",
+    alignItems: "baseline",
     justifyContent: "center",
     marginBottom: "30px",
-    gap: "5px",
+    gap: "4px",
 };
 
 const rsStyle = {
-    fontSize: "18px",
-    fontWeight: 700,
+    fontSize: "24px",
+    fontWeight: 400,
     color: "#1e293b",
-    marginTop: "8px",
 };
 
 const priceNumberStyle = {
-    fontSize: "52px",
-    fontWeight: 900,
-    color: "#1e293b",
+    fontSize: "64px",
+    fontWeight: 600,
+    color: "#334155",
     lineHeight: 1,
+};
+
+const perKmStyle = {
+    fontSize: "16px",
+    color: "#64748b",
+    fontWeight: 500,
 };
 
 const detailsListStyle = {
     display: "flex",
     flexDirection: "column",
-    gap: "12px",
+    gap: "15px",
     marginBottom: "40px",
 };
 
@@ -181,6 +232,21 @@ const detailItemStyle = {
     fontSize: "15px",
     color: "#64748b",
     fontWeight: 500,
+};
+
+const bookBtnStyle = {
+    background: "#f58220",
+    color: "white",
+    border: "none",
+    padding: "16px 45px",
+    borderRadius: "10px",
+    fontWeight: 800,
+    fontSize: "14px",
+    display: "flex",
+    alignItems: "center",
+    gap: "12px",
+    cursor: "pointer",
+    transition: "background 0.3s",
 };
 
 export default TariffSection;

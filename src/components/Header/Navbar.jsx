@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const navItems = [
     { label: "HOME", path: "/" },
-    { label: "TARIFF", path: "/" }, // Assuming Tariff is still an on-page section for now
+    { label: "TARIFF", path: "/tariff" }, 
     { label: "CONTACT US", path: "/contact" }
   ];
 
