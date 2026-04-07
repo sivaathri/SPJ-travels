@@ -1,5 +1,11 @@
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
-  const navItems = ["HOME", "TARIFF", "CONTACT US"];
+  const navItems = [
+    { label: "HOME", path: "/" },
+    { label: "TARIFF", path: "/" }, // Assuming Tariff is still an on-page section for now
+    { label: "CONTACT US", path: "/contact" }
+  ];
 
   return (
     <div style={{ background: "#1f2a44", position: "relative", zIndex: 20 }}>
@@ -14,9 +20,9 @@ const Navbar = () => {
         }}
       >
         {navItems.map((item, idx) => (
-          <div key={item} style={{ display: "flex", alignItems: "center" }}>
-            <a
-              href={`#${item.toLowerCase().replace(/ /g, "-")}`}
+          <div key={item.label} style={{ display: "flex", alignItems: "center" }}>
+            <Link
+              to={item.path}
               style={{
                 color: "rgba(255,255,255,0.85)",
                 fontWeight: 800,
@@ -27,12 +33,13 @@ const Navbar = () => {
                 textTransform: "uppercase",
                 padding: "0 32px",
                 transition: "color 0.2s",
+                cursor: "pointer",
               }}
               onMouseEnter={(e) => { e.currentTarget.style.color = "#f58220"; }}
               onMouseLeave={(e) => { e.currentTarget.style.color = "rgba(255,255,255,0.85)"; }}
             >
-              {item}
-            </a>
+              {item.label}
+            </Link>
             {idx < navItems.length - 1 && (
               <div style={{ width: "1px", height: "20px", background: "rgba(255,255,255,0.3)" }} />
             )}
