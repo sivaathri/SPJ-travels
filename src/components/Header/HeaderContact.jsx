@@ -1,5 +1,5 @@
 import { Phone, Mail, ArrowRight } from "lucide-react";
-import logo from "../../assets/suriya_tours_logo.png";
+import logo from "../../assets/logo.png";
 import phoneIcon from "../../assets/24.png";
 
 
