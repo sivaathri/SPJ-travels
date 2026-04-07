@@ -11,9 +11,9 @@ const Hero = () => {
   const slides = [
     {
       image: bg1,
-      welcome: "Welcome to SPJ Travels!",
-      title: "SPJ Travels",
-      subtitle: "Best Cab Service in Pondicherry!",
+      welcome: "Welcome to SPJ TOURS & TRAVELS!",
+      title: "SPJ TOURS & TRAVELS",
+      subtitle: "The Most Premium Cab Service in Pondicherry!",
     },
     {
       image: bg2,

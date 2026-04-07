@@ -9,14 +9,14 @@ const AboutSection = () => {
           <div style={contentStyle}>
             <div style={tagStyle}>
               <MapPin size={16} color="#1f2a44" />
-              <span>Suriya Tours & Cabs</span>
+              <span>SPJ TOURS & TRAVELS</span>
             </div>
-            <h2 style={headingStyle}>Your Reliable Partner for Every Journey</h2>
+            <h2 style={headingStyle}>Your Ultimate Travel Partner in South India</h2>
             <p style={paragraphStyle}>
-              At Suriya Tours & Cabs, we believe that travel should be more than just a destination—it should be a seamless, safe, and enjoyable experience. With years of expertise in the travel industry, we have become one of the most trusted cab services in Pondicherry and South India.
+              At SPJ Tours & Travels, we redefine the journey experience with a perfect blend of luxury, safety, and reliability. As a pioneer in the travel industry, we have established ourselves as the first choice for travelers seeking premium cab services across Pondicherry and South India.
             </p>
             <p style={paragraphStyle}>
-              Whether you're planning a local sightseeing tour, an outstation trip, or a quick airport drop, our fleet of modern, sanitized vehicles and professional drivers are here to serve you efficiently, 24/7.
+              From seamless airport transfers to expansive cross-country tours, our elite fleet and dedicated professionals ensure you travel in absolute comfort and style, 24 hours a day.
             </p>
 
             <div style={featureGridStyle}>
@@ -150,11 +150,13 @@ const statBoxStyle = {
     position: "absolute",
     bottom: "40px",
     left: "40px",
-    background: "#1f2a44",
+    background: "rgba(31, 42, 68, 0.7)", // Semi-transparent
+    backdropFilter: "blur(10px)", // Blur effect
     padding: "30px 40px",
     borderRadius: "24px",
     textAlign: "center",
     boxShadow: "0 20px 40px rgba(0,0,0,0.3)",
+    border: "1px solid rgba(255, 255, 255, 0.1)", // Glass edge
 };
 
 export default AboutSection;

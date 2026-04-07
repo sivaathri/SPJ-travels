@@ -24,7 +24,7 @@ function App() {
         }}
       >
         <p style={{ color: "#999", fontSize: "14px" }}>
-          © {new Date().getFullYear()} Pondy IT Solutions. All Rights Reserved.
+          © {new Date().getFullYear()} SPJ Tours & Travels. All Rights Reserved.
         </p>
       </div>
     </div>
