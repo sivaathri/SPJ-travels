@@ -1,0 +1,59 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Cinzel:wght@600;700;800;900&display=swap');
+
+@theme {
+  --color-primary: #f58220;
+  --color-primary-dark: #e67300;
+  --color-secondary: #0a101e;
+  --font-poppins: "Poppins", sans-serif;
+  --font-cinzel: "Cinzel", serif;
+}
+
+:root {
+  --primary: #f58220;
+  --secondary: #0a101e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #1a202c;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.orange-gradient {
+  background: linear-gradient(135deg, #f58220 0%, #ff8c00 50%, #ffae42 100%);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+::selection {
+  background: var(--primary);
+  color: white;
+}
