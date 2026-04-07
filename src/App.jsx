@@ -3,6 +3,7 @@ import Navbar from "./components/Header/Navbar";
 import Hero from "./components/Hero/Hero";
 import BookingForm from "./components/Booking/BookingForm";
 import FeatureSection from "./components/Features/FeatureSection";
+import AboutSection from "./components/About/AboutSection";
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Hero />
       <BookingForm />
       <FeatureSection />
+      <AboutSection />
       <div
         style={{
           background: "#f5f5f5",
