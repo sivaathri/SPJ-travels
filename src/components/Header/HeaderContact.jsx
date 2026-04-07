@@ -2,7 +2,6 @@ import { Phone, Mail, ArrowRight } from "lucide-react";
 import logo from "../../assets/logo.png";
 import phoneIcon from "../../assets/24.png";
 
-
 const Header = () => {
   return (
     <div
@@ -81,7 +80,7 @@ const Header = () => {
                 fontStyle: "italic",
                 fontFamily: "'Cinzel', serif",
                 letterSpacing: "1px",
-                marginLeft:"10px"
+                marginLeft: "10px",
               }}
             >
               SPJ
@@ -121,7 +120,7 @@ const Header = () => {
                 fontWeight: 600,
                 fontSize: "20px",
                 fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-               
+
                 textUnderlineOffset: "4px",
                 textDecorationThickness: "1px",
               }}
@@ -141,7 +140,7 @@ const Header = () => {
                 letterSpacing: "1px",
               }}
             >
-              99944 74049
+              +91 96556 97422
             </span>
           </div>
         </div>
@@ -219,7 +218,8 @@ const Header = () => {
         <button
           onMouseEnter={(e) => {
             e.currentTarget.style.transform = "translateY(-3px) scale(1.05)";
-            e.currentTarget.style.boxShadow = "0 10px 30px rgba(245,130,32,0.7)";
+            e.currentTarget.style.boxShadow =
+              "0 10px 30px rgba(245,130,32,0.7)";
             e.currentTarget.style.filter = "brightness(1.1)";
           }}
           onMouseLeave={(e) => {
