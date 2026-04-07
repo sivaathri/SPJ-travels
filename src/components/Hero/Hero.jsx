@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import bg1 from "../../assets/bg1.png";
 import bg2 from "../../assets/bg2.png";
 import bg3 from "../../assets/bg3.png";
+import tourPkg from "../../assets/tourpackage.png";
 
 const Hero = () => {
   const [current, setCurrent] = useState(0);
@@ -26,6 +27,12 @@ const Hero = () => {
       welcome: "Travel Beyond Limits!",
       title: "Outstation Trips",
       subtitle: "Safe, Comfortable & Affordable Rides to Any Destination!",
+    },
+    {
+      image: tourPkg,
+      welcome: "Explore Exotic Locations!",
+      title: "Tour Packages",
+      subtitle: "Customized Spiritual & Leisure Trips Just For You!",
     },
   ];
 
