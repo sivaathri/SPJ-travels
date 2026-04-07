@@ -53,7 +53,7 @@ const Hero = () => {
         width: "100%", 
         minHeight: "750px", 
         overflow: "hidden",
-        backgroundColor: "#1f2a44" 
+      
       }}
     >
       {/* Background Images - Cross-fade transition */}
@@ -66,7 +66,6 @@ const Hero = () => {
             backgroundImage: `url(${slide.image})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
-            filter: "brightness(0.6)",
             opacity: current === idx ? 1 : 0,
             transition: "opacity 1.5s ease-in-out",
             zIndex: 0,
