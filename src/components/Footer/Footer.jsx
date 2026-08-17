@@ -82,7 +82,7 @@ const Footer = () => {
                     href="mailto:booking.pondycabs@gmail.com"
                     style={linkStyle}
                   >
-                    booking.pondycabs@gmail.com
+                   cab@gmail.com
                   </a>
                 </span>
               </li>
