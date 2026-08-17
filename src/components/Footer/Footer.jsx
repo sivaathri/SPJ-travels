@@ -102,7 +102,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               style={{ color: "inherit", textDecoration: "none", fontWeight: 700 }}
             >
-              Pondy IT Solutions
+             
             </a>
             . All rights reserved.
           </p>
