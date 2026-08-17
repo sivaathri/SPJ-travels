@@ -70,7 +70,7 @@ const Footer = () => {
                 <span>
                   Tel :{" "}
                   <a href="tel:+918270246007" style={linkStyle}>
-                    +91 82702 46007
+                    +91 99943 54019
                   </a>
                 </span>
               </li>
@@ -96,10 +96,10 @@ const Footer = () => {
         <div style={innerStyle}>
           <p style={copyStyle}>
             © 2026,{" "}
-            <a 
-              href="https://pondyitsolutions.com" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href="https://pondyitsolutions.com"
+              target="_blank"
+              rel="noopener noreferrer"
               style={{ color: "inherit", textDecoration: "none", fontWeight: 700 }}
             >
               Pondy IT Solutions
