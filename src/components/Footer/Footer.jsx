@@ -61,7 +61,7 @@ const Footer = () => {
               <li style={contactListItemStyle}>
                 <div style={bulletStyle}></div>
                 <span>
-                  No 17, Thoppu Street, T.n.Palayam, <br />
+               NO.2 Main road  <br />
                   Puducherry.
                 </span>
               </li>

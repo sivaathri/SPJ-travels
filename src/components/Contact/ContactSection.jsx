@@ -22,7 +22,7 @@ const ContactSection = () => {
             <div style={infoGroupRow}>
               <div style={infoGroup}>
                 <h3 style={infoTitleStyle}>Address</h3>
-                <p style={infoTextStyle}>No 17, Thoppu Street, T.n.Palayam, Puducherry.</p>
+                <p style={infoTextStyle}>NO . 2 Main road puducherry</p>
               </div>
               <div style={infoGroup}>
                 <h3 style={infoTitleStyle}>Phone</h3>
